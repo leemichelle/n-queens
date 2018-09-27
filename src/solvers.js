@@ -16,19 +16,16 @@
 
 
 window.findNRooksSolution = function(n) {
-  var solution = nBoard; //fixme
+  var solution = []; //fixme
   
- //initialize a board like this: new Board({n: n}) 
-  var nBoard = new Board({n: n});
-  console.log(nBoard.set(1, 5), nBoard.set(0,3));
-  for (var i = 0; i < n; i++) {
-    var count = 0;
-    if (!nBoard.hasRowConflictAt(count) && !nBoard.hasColConflictAt(count)) {
-      nBoard.set(i, 1);
-    }
-    count++;
-  }
+  //initialize a board like this: new Board({n: n}) 
+  // var nBoard = new Board({n: n}).rows(); //.rows returns an array of arrays
 
+  // for (var i = 0; i < nBoard.length; i++) {
+  //   nBoard[i][i] = 1;
+  //   solution.push(nBoard[i]);
+  // }
+  
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
